@@ -42,7 +42,7 @@ function DesktopDropdown({ label, items }) {
       </button>
 
       {/* Padded wrapper closes the hover gap between the trigger and the panel */}
-      <div className="invisible absolute left-0 top-full w-56 translate-y-1 pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+        <div className="invisible absolute left-0 top-full z-9999 w-56 translate-y-1 pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
         <div className="overflow-hidden rounded-xl border border-slate-100 bg-white py-2 shadow-xl">
           {items.map((item) => (
             <a
@@ -96,7 +96,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white">
+    <header className="relative z-50 w-full bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo placeholder — drop your real logo in here */}
         <a href="#" className="flex items-center gap-3">
