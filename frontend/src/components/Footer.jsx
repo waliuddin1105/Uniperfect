@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
-    const [solutionsOpen, setSolutionsOpen] = useState(false);
-    const [resourcesOpen, setResourcesOpen] = useState(false);
+    const [productsOpen, setProductsOpen] = useState(false);
+    const [brandsOpen, setBrandsOpen] = useState(false);
 
     return (
         <footer className="border-t bg-white">
@@ -17,105 +17,100 @@ export default function Footer() {
                 <div className="grid md:grid-cols-3 gap-12">
                     {/* Left */}
                     <div>
-                        <h2 className="text-3xl font-bold text-[#1b2b6b] mb-6">
-                            The Disrupt Labs
+                        <h2 className="text-3xl font-bold text-[#C8102E] mb-6">
+                            Uni Perfect
                         </h2>
 
                         <p className="text-gray-600 leading-8 max-w-sm">
-                            Upgrade Your Existing CCTV Infrastructure With Artificial
-                            Intelligence For Proactive Industrial Safety.
+                            Importing and distributing 200+ genuine, high-quality auto
+                            spare parts for Toyota, Honda, Suzuki and more — trusted by
+                            wholesalers, retailers and workshops across Pakistan.
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-[#1b2b6b] mb-6">
+                        <h3 className="text-2xl font-semibold text-[#C8102E] mb-6">
                             Quick Links
                         </h3>
 
                         <ul className="space-y-4 text-gray-600">
                             <li>
-                                <a href="#" className="hover:text-blue-700 transition">
+                                <a href="#" className="hover:text-[#C8102E] transition">
                                     Home
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" className="hover:text-blue-700 transition">
-                                    Safety AI Use Cases
-                                </a>
-                            </li>
-
-                            {/* Solutions */}
-                            <li>
-                                <button
-                                    onClick={() => setSolutionsOpen(!solutionsOpen)}
-                                    className="flex items-center justify-between w-48 hover:text-blue-700 transition"
-                                >
-                                    <span>Solutions</span>
-                                    {solutionsOpen ? (
-                                        <ChevronUp size={16} />
-                                    ) : (
-                                        <ChevronDown size={16} />
-                                    )}
-                                </button>
-
-                                {solutionsOpen && (
-                                    <ul className="mt-3 ml-4 space-y-2 text-sm text-gray-500">
-                                        <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                AI Monitoring
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                Smart Cameras
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                Safety Analytics
-                                            </a>
-                                        </li>
-                                    </ul>
-                                )}
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-blue-700 transition">
+                                <a href="#" className="hover:text-[#C8102E] transition">
                                     About Us
                                 </a>
                             </li>
 
-                            {/* Resources */}
+                            {/* Products */}
                             <li>
                                 <button
-                                    onClick={() => setResourcesOpen(!resourcesOpen)}
-                                    className="flex items-center justify-between w-48 hover:text-blue-700 transition"
+                                    onClick={() => setProductsOpen(!productsOpen)}
+                                    className="flex items-center justify-between w-48 hover:text-[#C8102E] transition"
                                 >
-                                    <span>Resources</span>
-                                    {resourcesOpen ? (
+                                    <span>Our Products</span>
+                                    {productsOpen ? (
                                         <ChevronUp size={16} />
                                     ) : (
                                         <ChevronDown size={16} />
                                     )}
                                 </button>
 
-                                {resourcesOpen && (
+                                {productsOpen && (
                                     <ul className="mt-3 ml-4 space-y-2 text-sm text-gray-500">
                                         <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                Blogs
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Engine Components
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                Case Studies
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Suspension Parts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" className="hover:text-blue-700">
-                                                White Papers
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Electrical Parts & Filters
+                                            </a>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+
+                            {/* Brands */}
+                            <li>
+                                <button
+                                    onClick={() => setBrandsOpen(!brandsOpen)}
+                                    className="flex items-center justify-between w-48 hover:text-[#C8102E] transition"
+                                >
+                                    <span>Vehicles We Cover</span>
+                                    {brandsOpen ? (
+                                        <ChevronUp size={16} />
+                                    ) : (
+                                        <ChevronDown size={16} />
+                                    )}
+                                </button>
+
+                                {brandsOpen && (
+                                    <ul className="mt-3 ml-4 space-y-2 text-sm text-gray-500">
+                                        <li>
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Toyota
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Honda
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="hover:text-[#C8102E]">
+                                                Suzuki & More
                                             </a>
                                         </li>
                                     </ul>
@@ -123,13 +118,13 @@ export default function Footer() {
                             </li>
 
                             <li>
-                                <a href="#" className="hover:text-blue-700 transition">
+                                <a href="#" className="hover:text-[#C8102E] transition">
                                     Contact Us
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" className="hover:text-blue-700 transition">
+                                <a href="#" className="hover:text-[#C8102E] transition">
                                     Privacy Policy
                                 </a>
                             </li>
@@ -138,7 +133,7 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-[#1b2b6b] mb-6">
+                        <h3 className="text-2xl font-semibold text-[#C8102E] mb-6">
                             Contact Us
                         </h3>
 
@@ -146,7 +141,7 @@ export default function Footer() {
                             {/* Phone */}
                             <a
                                 href="tel:+923212699997"
-                                className="flex items-start gap-3 hover:text-blue-700 transition"
+                                className="flex items-start gap-3 hover:text-[#C8102E] transition"
                             >
                                 <Phone size={18} className="mt-1 shrink-0" />
                                 <span>03212699997</span>
@@ -156,62 +151,28 @@ export default function Footer() {
                                 href="https://mail.google.com/mail/?view=cm&fs=1&to=umair@thedisruptlabs.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-start gap-3 hover:text-blue-700 transition"
+                                className="flex items-start gap-3 hover:text-[#C8102E] transition"
                             >
                                 <Mail size={18} className="mt-1 shrink-0" />
                                 <span>umair@thedisruptlabs.com</span>
                             </a>
 
-                            {/* UAE */}
+                            {/* Karachi */}
                             <div>
-                                <h4 className="font-semibold text-[#1b2b6b] mb-2">UAE</h4>
-
-                                <a
-                                    href="https://maps.google.com/?q=In5+Tech+Dubai"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex gap-3 hover:text-blue-700 transition"
-                                >
-                                    <MapPin size={18} className="mt-1 shrink-0" />
-                                    <span>In5 Tech, Dubai, UAE</span>
-                                </a>
-                            </div>
-
-                            {/* Saudi Arabia */}
-                            <div>
-                                <h4 className="font-semibold text-[#1b2b6b] mb-2">
-                                    Saudi Arabia
+                                <h4 className="font-semibold text-[#C8102E] mb-2">
+                                    Karachi
                                 </h4>
 
                                 <a
-                                    href="https://maps.google.com/?q=KFUPM+Dhahran"
+                                    href="https://maps.google.com/?q=Ruby+Plaza+Karachi"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex gap-3 hover:text-blue-700 transition"
+                                    className="flex gap-3 hover:text-[#C8102E] transition"
                                 >
                                     <MapPin size={18} className="mt-1 shrink-0" />
                                     <span>
-                                        Office no: 40, building no: 8783, Dhahran Techno Valley,
-                                        KFUPM, Dhahran, Saudi Arabia
-                                    </span>
-                                </a>
-                            </div>
-
-                            {/* Pakistan */}
-                            <div>
-                                <h4 className="font-semibold text-[#1b2b6b] mb-2">
-                                    Pakistan
-                                </h4>
-
-                                <a
-                                    href="https://maps.google.com/?q=Block+3A+Gulistan-e-Johar+Karachi"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex gap-3 hover:text-blue-700 transition"
-                                >
-                                    <MapPin size={18} className="mt-1 shrink-0" />
-                                    <span>
-                                        Suite No. B6/1, Block 3A, Gulistan-e-Johar, Karachi
+                                        G-92 Ruby Plaza, Magazine Lane, near Preedy Quarters,
+                                        M.A. Jinnah Road, Karachi
                                     </span>
                                 </a>
                             </div>
