@@ -15,8 +15,6 @@ import {
 /**
  * About.jsx — Uni Perfect
  * Palette: red (#C8102E) + ink (#181513) on warm white (#F8F5F0)
- * Display face: Oswald (condensed, industrial — spec-sheet/signage feel)
- * Utility face: JetBrains Mono (part numbers, stats)
  * Signature element: rotated "genuine parts" certification stamp,
  * echoing the customs/inspection stamps that matter in an import business
  * built on trust against counterfeit parts.
@@ -72,29 +70,23 @@ const stagger = {
 
 export default function About() {
   return (
-    <div className="bg-[#F8F5F0] text-[#181513] font-[Inter,sans-serif] overflow-hidden">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap');
-        .font-display { font-family: 'Oswald', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-      `}</style>
-
+    <div className="bg-[#F8F5F0] text-[#181513] overflow-hidden">
       {/* HERO */}
       <section className="relative border-b border-black/10">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[1.3fr_0.7fr] gap-14 items-center">
           <motion.div initial="hidden" animate="show" variants={stagger}>
             <motion.p
               variants={fadeUp}
-              className="font-mono text-sm sm:text-base tracking-[0.2em] uppercase text-[#C8102E] mb-5"
+              className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-5"
             >
               Karachi, Pakistan — Auto Parts Import &amp; Distribution
             </motion.p>
             <motion.h1
               variants={fadeUp}
-              className="font-display font-700 uppercase leading-[0.95] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight"
+              className="font-bold uppercase leading-[0.95] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight"
             >
-              Parts Pakistan's
-              <br />
+              Pakistan's
+              
               workshops <span className="text-[#C8102E]">trust</span>.
             </motion.h1>
             <motion.p
@@ -124,12 +116,12 @@ export default function About() {
               <div className="absolute inset-3 rounded-full border border-[#C8102E]/40" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
                 <BadgeCheck className="w-7 h-7 text-[#C8102E] mb-1" strokeWidth={1.75} />
-                <span className="font-display uppercase text-[13px] tracking-wide leading-tight text-[#C8102E]">
+                <span className="font-bold uppercase text-[13px] tracking-wide leading-tight text-[#C8102E]">
                   Genuine
                   <br />
                   Parts
                 </span>
-                <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-[#181513]/60 mt-1">
+                <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-[#181513]/60 mt-1">
                   Uni Perfect · Est.
                 </span>
               </div>
@@ -148,7 +140,7 @@ export default function About() {
           >
             {stats.map((s) => (
               <motion.div key={s.label} variants={fadeUp} className="py-6 px-4 sm:px-6">
-                <div className="font-mono text-2xl sm:text-3xl font-semibold text-[#C8102E]">
+                <div className="text-2xl sm:text-3xl font-bold text-[#C8102E]">
                   {s.value}
                 </div>
                 <div className="text-xs sm:text-sm text-[#F8F5F0]/70 mt-1 leading-snug">
@@ -168,10 +160,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
         >
-          <p className="font-mono text-sm sm:text-base tracking-[0.2em] uppercase text-[#C8102E] mb-3">
+          <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3">
             Our Story
           </p>
-          <h2 className="font-display uppercase text-3xl sm:text-4xl leading-tight">
+          <h2 className="font-bold uppercase text-3xl sm:text-4xl leading-tight">
             Two decades of
             <br />
             keeping vehicles running.
@@ -217,10 +209,10 @@ export default function About() {
             viewport={{ once: true, amount: 0.4 }}
             variants={fadeUp}
           >
-            <p className="font-mono text-sm sm:text-base tracking-[0.2em] uppercase text-[#C8102E] mb-3">
+            <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3">
               What We Supply
             </p>
-            <h2 className="font-display uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight">
+            <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight">
               Essential parts, across the whole vehicle.
             </h2>
           </motion.div>
@@ -241,7 +233,7 @@ export default function About() {
               >
                 <c.icon className="w-6 h-6 text-[#C8102E]" strokeWidth={1.75} />
                 <div>
-                  <h3 className="font-display uppercase text-base tracking-wide">
+                  <h3 className="font-bold uppercase text-base tracking-wide">
                     {c.name}
                   </h3>
                   <p className="text-sm text-[#181513]/65 mt-2 leading-relaxed">
@@ -262,10 +254,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
         >
-          <p className="font-mono text-sm sm:text-base tracking-[0.2em] uppercase text-[#C8102E] mb-3">
+          <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3">
             Why Uni Perfect
           </p>
-          <h2 className="font-display uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight">
+          <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight">
             Quality, reliability, satisfaction.
           </h2>
         </motion.div>
@@ -288,7 +280,7 @@ export default function About() {
                 <v.icon className="w-5 h-5 text-[#C8102E]" strokeWidth={1.75} />
               </div>
               <div>
-                <h3 className="font-display uppercase text-base tracking-wide">
+                <h3 className="font-bold uppercase text-base tracking-wide">
                   {v.title}
                 </h3>
                 <p className="text-sm text-[#181513]/65 mt-2 leading-relaxed">
