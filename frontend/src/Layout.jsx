@@ -7,7 +7,6 @@ export default function Layout() {
     <>
       <Navbar />
       <main>
-        <h1 className="text-3xl font-bold underline">Uniperfect</h1>
         <Outlet />
       </main>
       <Footer />
