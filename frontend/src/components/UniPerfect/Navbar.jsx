@@ -13,11 +13,11 @@ const NAV_LINKS = [
   {
     label: "Brands",
     dropdown: [
-      { label: "Product 1", href: "#" },
-      { label: "Product 2", href: "#" },
+      { label: "UniPerfect", href: "#" },
+      { label: "Superior", href: "/s" },
     ],
   },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "u/about" },
   
   { label: "Contact Us", href: "#" },
 ];

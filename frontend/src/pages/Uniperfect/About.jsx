@@ -11,6 +11,8 @@ import {
   BadgeCheck,
   Gauge,
 } from "lucide-react";
+import Navbar from "../../components/UniPerfect/Navbar";
+import Footer from "../../components/UniPerfect/Footer";
 
 /**
  * About.jsx — Uni Perfect
@@ -70,7 +72,9 @@ const stagger = {
 
 export default function About() {
   return (
-    <div className="bg-[#F8F5F0] text-[#181513] overflow-hidden">
+  <>
+  <Navbar />
+  <div className="bg-[#F8F5F0] text-[#181513] overflow-hidden">
       {/* HERO */}
       <section className="relative border-b border-black/10">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[1.3fr_0.7fr] gap-14 items-center">
@@ -117,9 +121,9 @@ export default function About() {
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
                 <BadgeCheck className="w-7 h-7 text-[#C8102E] mb-1" strokeWidth={1.75} />
                 <span className="font-bold uppercase text-[13px] tracking-wide leading-tight text-[#C8102E]">
-                  Genuine
+                  OEM Quality
                   <br />
-                  Parts
+                  Products
                 </span>
                 <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-[#181513]/60 mt-1">
                   Uni Perfect · Est.
@@ -292,5 +296,7 @@ export default function About() {
         </motion.div>
       </section>
     </div>
+    <Footer />
+  </>
   );
 }

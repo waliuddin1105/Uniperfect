@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import Home from "./pages/Uniperfect/Home";
+import About from "./pages/Uniperfect/About";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Route>
+        {/* Uniperfect Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="u/about" element={<About />} />
+
+        {/* Superior Pages */}
+
+
       </Routes>
     </BrowserRouter>
   );

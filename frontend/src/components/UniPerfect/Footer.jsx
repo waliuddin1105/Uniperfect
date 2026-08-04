@@ -117,17 +117,7 @@ export default function Footer() {
                                 )}
                             </li>
 
-                            <li>
-                                <a href="#" className="hover:text-[#C8102E] transition">
-                                    Contact Us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-[#C8102E] transition">
-                                    Privacy Policy
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
 
@@ -147,15 +137,7 @@ export default function Footer() {
                                 <span>03212699997</span>
                             </a>
 
-                            <a
-                                href="https://mail.google.com/mail/?view=cm&fs=1&to=umair@thedisruptlabs.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-start gap-3 hover:text-[#C8102E] transition"
-                            >
-                                <Mail size={18} className="mt-1 shrink-0" />
-                                <span>umair@thedisruptlabs.com</span>
-                            </a>
+                            
 
                             {/* Karachi */}
                             <div>
