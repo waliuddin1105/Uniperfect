@@ -6,7 +6,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Uniperfect Pages */}
+        {/* Uniperfect Pages below*/}
         <Route path="/" element={<Home />} />
         <Route path="u/about" element={<About />} />
 
