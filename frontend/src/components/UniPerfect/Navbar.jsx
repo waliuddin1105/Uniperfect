@@ -13,13 +13,13 @@ const NAV_LINKS = [
   {
     label: "Brands",
     dropdown: [
-      { label: "UniPerfect", href: "#" },
+      { label: "UniPerfect", href: "/u/products" },
       { label: "Superior", href: "/s" },
     ],
   },
   { label: "About Us", href: "u/about" },
   
-  { label: "Contact Us", href: "#" },
+  { label: "Contact Us", href: "?" },
 ];
 
 function DesktopDropdown({ label, items }) {
@@ -97,7 +97,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
         {/* Logo — drop your real logo file in here (e.g. an <img> tag) */}
-        <a href="#" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img src="/logo4.jpg" alt="Company logo" className="max-h-18 max-w-40 rounded-md" />
         </a>
 
