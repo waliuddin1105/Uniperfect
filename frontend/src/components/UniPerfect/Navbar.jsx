@@ -1,25 +1,23 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 // Brand red pulled directly from the logo background (#E50E37).
 const BRAND_RED = "#E50E37";
 
 // Edit these arrays to change links / dropdown items.
-// "Resources" items are placeholders since your screenshot only showed
-// the "Solutions" dropdown open — swap in your real links.
+// All internal paths are absolute (start with "/") so routing works
+// correctly no matter which page you're currently on.
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  
+  { label: "Products", href: "/u/products" },
   {
-    label: "Brands",
+    label: " More Brands",
     dropdown: [
-      { label: "UniPerfect", href: "/u/products" },
       { label: "Superior", href: "/s" },
     ],
   },
-  { label: "About Us", href: "u/about" },
-  
-  { label: "Contact Us", href: "?" },
+  { label: "About Us", href: "/u/about" },
 ];
 
 function DesktopDropdown({ label, items }) {
@@ -35,18 +33,17 @@ function DesktopDropdown({ label, items }) {
           className="mt-px transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
         />
       </button>
-
       {/* Padded wrapper closes the hover gap between the trigger and the panel */}
       <div className="invisible absolute left-0 top-full z-9999 w-56 translate-y-1 pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
         <div className="overflow-hidden rounded-xl border border-slate-100 bg-white py-2 shadow-xl">
           {items.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="block px-4 py-2.5 text-base text-[#E50E37] transition-colors hover:bg-slate-50 hover:text-[#c00c2e]"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -73,13 +70,13 @@ function MobileDropdown({ label, items }) {
       {open && (
         <div className="pb-2">
           {items.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="block py-2 pl-3 text-base text-white/80 hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -97,9 +94,9 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
         {/* Logo — drop your real logo file in here (e.g. an <img> tag) */}
-        <a href="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src="/logo4.jpg" alt="Company logo" className="max-h-18 max-w-40 rounded-md" />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
@@ -107,13 +104,13 @@ export default function Navbar() {
             link.dropdown ? (
               <DesktopDropdown key={link.label} label={link.label} items={link.dropdown} />
             ) : (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="py-2 text-base font-medium text-white transition-colors hover:text-white/80"
               >
                 {link.label}
-              </a>
+              </Link>
             )
           )}
         </nav>
@@ -137,13 +134,13 @@ export default function Navbar() {
             link.dropdown ? (
               <MobileDropdown key={link.label} label={link.label} items={link.dropdown} />
             ) : (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="block border-b border-white/20 py-3 text-base font-medium text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             )
           )}
         </nav>

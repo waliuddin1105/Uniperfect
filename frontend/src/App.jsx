@@ -8,8 +8,8 @@ export default function App() {
       <Routes>
         {/* Uniperfect Pages below*/}
         <Route path="/" element={<Home />} />
-        <Route path="u/about" element={<About />} />
-        <Route path="u/products" element={<ProductsUniPerfect />} />
+        <Route path="/u/about" element={<About />} />
+        <Route path="/u/products" element={<ProductsUniPerfect />} />
 
         {/* Superior Pages */}
 

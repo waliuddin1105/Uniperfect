@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { BadgeCheck, PackageSearch } from "lucide-react";
 import Navbar from "../../components/UniPerfect/Navbar";
 import Footer from "../../components/UniPerfect/Footer";
-
+import { FaWhatsapp } from "react-icons/fa";
 /**
  * ProductsUniPerfect.jsx — Uni Perfect
  * Palette: red (#C8102E) + ink (#181513) on warm white (#F8F5F0)
@@ -13,60 +13,59 @@ import Footer from "../../components/UniPerfect/Footer";
  * Signature element: the same rotated, dashed "genuine parts" stamp from
  * About.jsx, reused here as a small "Genuine" tag pinned to each photo —
  * so the two pages read as one identity, not two different templates.
- *
+*
  * Add/replace products in the array below — everything else (motion,
  * alternating sides, alternating tint) is handled automatically by index.
- */
+*/
 
 const products = [
   {
-    tag: "Engine Components",
-    name: "Engine Gasket Set",
-    ref: "UP-11024-G",
+    tag: "Braking System",
+    name: "Brake Master Cylinder (BMC)",
     image: "/BMC_new.png",
-    desc: "Precision-cut gaskets that seal cleanly against heat and pressure. Engineered to fit a wide range of Toyota and Honda engines. Built to hold compression steady and keep leaks out for the long run. Sourced from reputable manufacturers, never aftermarket guesswork.",
+    desc: "A hydraulic brake component that converts brake-pedal pressure into hydraulic pressure, sending brake fluid to the wheel brakes for smooth and effective braking. Available in a range of Toyota and Suzuki models sourced from reputable manufacturers.",
   },
   {
-    tag: "Suspension Parts",
-    name: "Suspension Bushing Kit",
-    ref: "UP-22587-B",
+    tag: "Braking System",
+    name: "Wheel Cylinder",
+    image: "/wheel cylinder gemini.png",
+    desc: "High-quality wheel cylinder made from durable materials for reliable braking performance. Designed for smooth brake operation, excellent sealing, and long service life with a precise fit.",
+  },
+  {
+    tag: "Electric Parts",
+    name: "Ignition Coil",
     image: "/coil gemini.png",
-    desc: "Dampens vibration and road noise for a smoother, more controlled ride. Compounded to resist wear under everyday road conditions. Direct fit for popular Suzuki and Toyota models. Backed by two decades of trusted sourcing.",
+    desc: "High-quality ignition coil designed to deliver strong,reliable spark performance for smooth engine starting, better combustion, and consistent vehicle performance.",
   },
   {
-    tag: "Filters",
-    name: "Oil Filter",
-    ref: "UP-30452-F",
+    tag: "Transmission System",
+    name: "Universal Joint",
     image: "/cross gemini.png",
-    desc: "High-flow filtration that protects the engine over the long haul. Consistent build quality, shipment after shipment. Easy to stock, easy to install, easy to trust. A workshop staple from Karachi to Quetta.",
+    desc: "Connects the propeller/drive shaft to the differential or transmission and allows the shaft to transfer power while accommodating changes in angle. Available in a range of car models, packed in our original brand packaging.",
   },
   {
-    tag: "Electrical Parts",
-    name: "Electrical Relay Module",
-    ref: "UP-40911-R",
+    tag: "Engine Part",
+    name: "Flywheel Ring",
     image: "/Flywheel ring gemini.png",
     desc: "Reliable switching for lighting, fuel and cooling circuits. Tested to handle real-world electrical load without failure. Compatible with major Honda and Suzuki wiring layouts. The small part that keeps everything else running.",
   },
   {
-    tag: "Suspension Parts",
-    name: "Shock Absorber",
-    ref: "UP-22910-S",
+    tag: "Cooling System",
+    name: "Radiator Cap",
     image: "/radiator_new.png",
-    desc: "Tuned for stability across varied road conditions. Reduces bounce and keeps tyres planted through every drive. A direct OEM-spec replacement, never an imitation. Trusted by workshops for repeat, predictable performance.",
+    desc: "Designed to maintain proper cooling-system pressure and prevent coolant leakage. Made from durable, heat-resistant materials for reliable performance and long service life.",
   },
   {
-    tag: "Filters",
-    name: "Air Intake Filter",
-    ref: "UP-31207-A",
+    tag: "Cooling System",
+    name: "Water Pump",
     image: "/wp.png",
-    desc: "Keeps dust and debris out of the combustion chamber. Supports steady airflow for better fuel efficiency. Fits snugly with no modification required. Genuine quality, imported and distributed nationwide.",
+    desc: "High-quality water pump designed for efficient coolant circulation, long-lasting performance, and protection against engine overheating. Available in a range of Toyota and Suzuki models.",
   },
   {
-    tag: "Filters",
-    name: "Air Intake Filter",
-    ref: "UP-31207-A",
-    image: "/wheel cylinder gemini.png",
-    desc: "Keeps dust and debris out of the combustion chamber. Supports steady airflow for better fuel efficiency. Fits snugly with no modification required. Genuine quality, imported and distributed nationwide.",
+    tag: "Fuel Filter",
+    name: "Car Fuel Filter",
+    image: "/Fuel filter.jpg",
+    desc: "Designed to effectively remove dirt,rust, and other contaminants from the fuel system, ensuring clean fuel flow and protecting the engine. Durable, reliable, and suitable for smooth efficient engine performance.",
   }
 ];
 
@@ -208,9 +207,7 @@ export default function ProductsUniPerfect() {
                     <h3 className="font-bold uppercase text-3xl sm:text-4xl leading-tight mb-2">
                       {p.name}
                     </h3>
-                    <p className="font-mono text-xs tracking-wide text-[#181513]/55 mb-5">
-                      Part Ref. {p.ref}
-                    </p>
+                    
                     <p className="text-[#181513]/70 leading-relaxed max-w-md">
                       {p.desc}
                     </p>
@@ -220,6 +217,26 @@ export default function ProductsUniPerfect() {
             );
           })}
         </section>
+        <section className="border-b border-black/10">
+  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-16 sm:py-20 text-center">
+    <h3 className="font-bold uppercase text-2xl sm:text-3xl tracking-tight mb-4">
+      Looking for something else?
+    </h3>
+    <p className="text-[#181513]/70 max-w-xl mx-auto mb-8 leading-relaxed">
+      We stock 200+ genuine auto parts beyond what's listed here.
+      Reach out on WhatsApp and we'll help you find the exact part you need.
+    </p>
+    <a
+      href="https://wa.me/923350099880"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold uppercase tracking-wide px-8 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+    >
+      <FaWhatsapp size={20} />
+      For More Products, Contact Here
+    </a>
+  </div>
+</section>
       </div>
       <Footer />
     </>
