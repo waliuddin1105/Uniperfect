@@ -12,7 +12,7 @@ const BRAND_BLUE = "#1208FF";
 // correctly no matter which page you're currently on.
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/s" },
   { label: "Products", href: "/s/products" },
   {
     label: " More Brands",
