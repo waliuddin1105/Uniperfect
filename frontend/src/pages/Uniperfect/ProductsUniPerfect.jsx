@@ -99,10 +99,10 @@ export default function ProductsUniPerfect() {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F8F5F0] text-[#181513]">
+      <div className="bg-[#F8F5F0] text-[#181513] overflow-x-hidden">
         {/* HEADER */}
         <section className="border-b border-black/10">
-  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20">
+  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-14 pb-10 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20">
     <motion.div
       initial="hidden"
       animate="show"
@@ -111,21 +111,21 @@ export default function ProductsUniPerfect() {
     >
       <motion.p
         variants={fadeUp}
-        className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-5"
+        className="text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-4 sm:mb-5"
       >
         Genuine Auto Spare Parts
       </motion.p>
 
       <motion.h1
         variants={fadeUp}
-        className="font-bold uppercase leading-[0.95] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight"
+        className="font-bold uppercase leading-[0.95] text-[14vw] xs:text-5xl sm:text-6xl lg:text-7xl tracking-tight break-words"
       >
         Our <span className="text-[#C8102E]">Products</span>
       </motion.h1>
 
       <motion.p
         variants={fadeUp}
-        className="mt-7 mx-auto text-lg leading-relaxed text-[#181513]/80 max-w-xl"
+        className="mt-6 sm:mt-7 mx-auto text-base sm:text-lg leading-relaxed text-[#181513]/80 max-w-xl px-2 sm:px-0"
       >
         A selection of the genuine, OEM-quality parts we import and
         distribute nationwide — sourced from reputable manufacturers
@@ -145,9 +145,9 @@ export default function ProductsUniPerfect() {
                 className={`border-b border-black/10 ${reversed ? "bg-white" : ""}`}
               >
                 <div
-                  className={`max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-16 sm:py-20 lg:py-24 flex flex-col ${
+                  className={`max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-20 lg:py-24 flex flex-col ${
                     reversed ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } items-center gap-10 lg:gap-20`}
+                  } items-center gap-10 sm:gap-12 lg:gap-20`}
                 >
                   {/* IMAGE */}
                   <motion.div
@@ -157,7 +157,7 @@ export default function ProductsUniPerfect() {
                     viewport={{ once: true, amount: 0.35 }}
                     variants={imageVariants(reversed)}
                   >
-                    <div className="max-w-sm mx-auto lg:max-w-none">
+                    <div className="max-w-[85%] xs:max-w-sm mx-auto lg:max-w-none">
                       <motion.div
                         className="relative"
                         
@@ -180,12 +180,12 @@ export default function ProductsUniPerfect() {
 
                         {/* Genuine-parts stamp — echoes the About page's signature mark */}
                         <div
-                          className={`absolute -top-5 ${
-                            reversed ? "-right-5" : "-left-5"
-                          } w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] rounded-full bg-[#F8F5F0] border-2 border-dashed border-[#C8102E]/70 flex flex-col items-center justify-center text-center rotate-[-6deg] shadow-[0_2px_10px_rgba(0,0,0,0.08)]`}
+                          className={`absolute -top-3 sm:-top-5 ${
+                            reversed ? "-right-3 sm:-right-5" : "-left-3 sm:-left-5"
+                          } w-12 h-12 sm:w-16 sm:h-16 lg:w-[4.5rem] lg:h-[4.5rem] rounded-full bg-[#F8F5F0] border-2 border-dashed border-[#C8102E]/70 flex flex-col items-center justify-center text-center rotate-[-6deg] shadow-[0_2px_10px_rgba(0,0,0,0.08)]`}
                         >
-                          <BadgeCheck className="w-4 h-4 text-[#C8102E]" strokeWidth={1.75} />
-                          <span className="text-[7px] font-bold uppercase tracking-[0.15em] text-[#C8102E] mt-0.5 leading-none">
+                          <BadgeCheck className="w-3 h-3 sm:w-4 sm:h-4 text-[#C8102E]" strokeWidth={1.75} />
+                          <span className="text-[6px] sm:text-[7px] font-bold uppercase tracking-[0.15em] text-[#C8102E] mt-0.5 leading-none">
                             Genuine
                           </span>
                         </div>
@@ -195,20 +195,20 @@ export default function ProductsUniPerfect() {
 
                   {/* TEXT */}
                   <motion.div
-                    className="w-full lg:w-1/2"
+                    className="w-full lg:w-1/2 text-center lg:text-left px-1 sm:px-0"
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.35 }}
                     variants={textVariants(reversed)}
                   >
-                    <p className="text-sm font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3">
+                    <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3">
                       {p.tag}
                     </p>
-                    <h3 className="font-bold uppercase text-3xl sm:text-4xl leading-tight mb-2">
+                    <h3 className="font-bold uppercase text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2">
                       {p.name}
                     </h3>
                     
-                    <p className="text-[#181513]/70 leading-relaxed max-w-md">
+                    <p className="text-sm sm:text-base text-[#181513]/70 leading-relaxed max-w-md mx-auto lg:mx-0">
                       {p.desc}
                     </p>
                   </motion.div>
@@ -218,11 +218,11 @@ export default function ProductsUniPerfect() {
           })}
         </section>
         <section className="border-b border-black/10">
-  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-16 sm:py-20 text-center">
-    <h3 className="font-bold uppercase text-2xl sm:text-3xl tracking-tight mb-4">
+  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-14 sm:py-20 text-center">
+    <h3 className="font-bold uppercase text-xl sm:text-3xl tracking-tight mb-4">
       Looking for something else?
     </h3>
-    <p className="text-[#181513]/70 max-w-xl mx-auto mb-8 leading-relaxed">
+    <p className="text-sm sm:text-base text-[#181513]/70 max-w-xl mx-auto mb-8 leading-relaxed px-2 sm:px-0">
       We stock 200+ genuine auto parts beyond what's listed here.
       Reach out on WhatsApp and we'll help you find the exact part you need.
     </p>
@@ -230,10 +230,10 @@ export default function ProductsUniPerfect() {
       href="https://wa.me/923350099880"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold uppercase tracking-wide px-8 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+      className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold uppercase tracking-wide text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 text-center"
     >
-      <FaWhatsapp size={20} />
-      For More Products, Contact Here
+      <FaWhatsapp size={18} className="shrink-0" />
+      <span>For More Products, Contact Here</span>
     </a>
   </div>
 </section>
