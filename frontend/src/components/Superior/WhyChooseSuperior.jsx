@@ -69,7 +69,7 @@ export default function WhyChooseSuperior() {
           >
             The Reason Workshops
             <br />
-            Trust <span className="text-[#1208FF]">Uni Perfect</span>.
+            Trust <span className="text-[#1208FF]">Superior</span>.
           </motion.h2>
 
           <motion.p

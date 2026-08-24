@@ -109,7 +109,7 @@ export default function SafetyModules() {
     <section className="w-full bg-white px-6 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-bold leading-snug text-[#1208FF] md:text-3xl">
-          Uni Perfect Delivers Genuine Auto Parts
+          Superior Delivers Genuine Auto Parts
           <br />
           You Can Rely On, Nationwide!
         </h2>
