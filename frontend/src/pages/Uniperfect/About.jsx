@@ -30,10 +30,10 @@ const stats = [
 ];
 
 const categories = [
-  { icon: Cog, name: "Engine components", desc: "Gaskets, belts, pistons and core internals built to spec." },
-  { icon: Gauge, name: "Suspension parts", desc: "Bushings, shocks and links for a smoother, safer ride." },
-  { icon: BatteryCharging, name: "Electrical parts", desc: "Sensors, relays and wiring components that just work." },
-  { icon: Filter, name: "Filters", desc: "Oil, air and fuel filters that protect the engine long-term." },
+  { icon: Cog, name: "Engine and Braking parts", desc: "Flywheel rings, Brake master cylinders and wheel cylinders to power core functions of a vehicle." },
+  { icon: Gauge, name: "Suspension parts", desc: "Linker Z, Tie rod, Ball joint and CV joint for smoother ride." },
+  { icon: BatteryCharging, name: "Electrical parts", desc: "Ignition coil, reverse, ignition and temperature switches supporting car functions." },
+  { icon: Filter, name: "Filters", desc: "Fuel Filters for range of cars that protects the engine long-term." },
 ];
 
 const values = [
