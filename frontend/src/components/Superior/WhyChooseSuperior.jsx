@@ -83,7 +83,7 @@ export default function WhyChooseSuperior() {
           </motion.p>
 
           <motion.a
-            href="u/products"
+            href="s/products"
             variants={fadeUp}
             className="inline-block bg-[#1208FF] text-white font-semibold uppercase text-sm tracking-wide px-8 py-4 rounded-full hover:bg-[#0D06CC] transition-colors duration-300"
           >
