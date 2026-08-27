@@ -52,14 +52,15 @@ function ModuleCard({ title, description, icon: Icon }) {
   return (
     <div
       className="
-        group rounded-2xl border border-[#1208FF]/15 bg-white p-6
+        group rounded-2xl border border-[#2563A6]/15 bg-white p-6
         shadow-sm transition-all duration-300
-        hover:bg-[#1208FF] hover:shadow-lg
+        hover:bg-[#2563A6] hover:shadow-lg
       "
     >
+      {/* Title */}
       <h3
         className="
-          text-lg font-bold text-[#0D06CC]
+          text-lg font-bold text-[#2563A6]
           transition-colors duration-300
           group-hover:text-white
         "
@@ -67,10 +68,11 @@ function ModuleCard({ title, description, icon: Icon }) {
         {title}
       </h3>
 
+      {/* Icon */}
       <div
         className="
           mt-4 flex h-16 w-16 items-center justify-center rounded-full
-          bg-[#1208FF] transition-colors duration-300
+          bg-[#2563A6] transition-colors duration-300
           group-hover:bg-white
         "
       >
@@ -78,22 +80,24 @@ function ModuleCard({ title, description, icon: Icon }) {
           className="
             h-7 w-7 text-white
             transition-colors duration-300
-            group-hover:text-[#1208FF]
+            group-hover:text-[#2563A6]
           "
         />
       </div>
 
+      {/* Divider */}
       <div
         className="
-          mt-4 h-px w-10 bg-[#1208FF]/20
+          mt-4 h-px w-10 bg-[#2563A6]/20
           transition-colors duration-300
           group-hover:bg-white/30
         "
       />
 
+      {/* Description */}
       <p
         className="
-          mt-4 text-slate-500
+          mt-4 text-slate-600
           transition-colors duration-300
           group-hover:text-white
         "
@@ -108,12 +112,15 @@ export default function SafetyModules() {
   return (
     <section className="w-full bg-white px-6 py-16">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-2xl font-bold leading-snug text-[#1208FF] md:text-3xl">
+
+        {/* Section Title */}
+        <h2 className="text-center text-2xl font-bold leading-snug text-[#2563A6] md:text-3xl">
           Superior Delivers Genuine Auto Parts
           <br />
           You Can Rely On, Nationwide!
         </h2>
 
+        {/* Module Cards */}
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {MODULES.map((module) => (
             <ModuleCard

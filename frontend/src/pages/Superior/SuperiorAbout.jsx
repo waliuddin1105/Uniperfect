@@ -19,7 +19,7 @@ import Footer from "../../components/Superior/Footer";
 
 /**
  * About.jsx — Superior
- * Palette: blue (#1208FF) + white
+ * Palette: blue (#2563A6) + white
  */
 
 const stats = [
@@ -101,10 +101,12 @@ export default function SuperiorAbout() {
     <>
       <Navbar />
 
-      <div className="bg-white text-[#1208FF] overflow-hidden">
+      <div className="bg-white text-slate-700 overflow-hidden">
+
         {/* HERO */}
-        <section className="relative border-b border-[#1208FF]/10">
+        <section className="relative border-b border-[#2563A6]/10">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[1.3fr_0.7fr] gap-14 items-center">
+
             <motion.div
               initial="hidden"
               animate="show"
@@ -112,24 +114,24 @@ export default function SuperiorAbout() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#1208FF] mb-5"
+                className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#2563A6] mb-5"
               >
                 Karachi, Pakistan — Auto Parts Import &amp; Distribution
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="font-bold uppercase leading-[0.95] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight text-[#1208FF]"
+                className="font-bold uppercase leading-[0.95] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight text-[#2563A6]"
               >
                 Pakistan's
                 <br />
                 workshops{" "}
-                <span className="text-[#1208FF]">trust</span>.
+                <span className="text-[#2563A6]">trust</span>.
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-7 text-lg leading-relaxed text-[#1208FF]/80 max-w-xl"
+                className="mt-7 text-lg leading-relaxed text-slate-600 max-w-xl"
               >
                 For over 20 years, Superior has imported and distributed
                 premium-quality auto spare parts for Toyota, Honda, Suzuki and
@@ -158,23 +160,23 @@ export default function SuperiorAbout() {
                   ease: "easeInOut",
                 }}
               >
-                <div className="absolute inset-0 rounded-full border-[3px] border-dashed border-[#1208FF]/70" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-dashed border-[#2563A6]/70" />
 
-                <div className="absolute inset-3 rounded-full border border-[#1208FF]/40" />
+                <div className="absolute inset-3 rounded-full border border-[#2563A6]/40" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
                   <BadgeCheck
-                    className="w-7 h-7 text-[#1208FF] mb-1"
+                    className="w-7 h-7 text-[#2563A6] mb-1"
                     strokeWidth={1.75}
                   />
 
-                  <span className="font-bold uppercase text-[13px] tracking-wide leading-tight text-[#1208FF]">
+                  <span className="font-bold uppercase text-[13px] tracking-wide leading-tight text-[#2563A6]">
                     OEM Quality
                     <br />
                     Products
                   </span>
 
-                  <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-[#1208FF]/60 mt-1">
+                  <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-slate-500 mt-1">
                     Superior · Est.
                   </span>
                 </div>
@@ -183,7 +185,7 @@ export default function SuperiorAbout() {
           </div>
 
           {/* Stats strip */}
-          <div className="border-t border-[#1208FF]/10 bg-[#1208FF] text-white">
+          <div className="border-t border-[#2563A6]/10 bg-[#2563A6] text-white">
             <motion.div
               className="max-w-6xl mx-auto px-6 lg:px-10 grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/15"
               initial="hidden"
@@ -212,17 +214,18 @@ export default function SuperiorAbout() {
 
         {/* STORY */}
         <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-24 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
+
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
             variants={fadeUp}
           >
-            <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#1208FF] mb-3">
+            <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#2563A6] mb-3">
               Our Story
             </p>
 
-            <h2 className="font-bold uppercase text-3xl sm:text-4xl leading-tight text-[#1208FF]">
+            <h2 className="font-bold uppercase text-3xl sm:text-4xl leading-tight text-[#2563A6]">
               Two decades of
               <br />
               keeping vehicles running.
@@ -230,7 +233,7 @@ export default function SuperiorAbout() {
           </motion.div>
 
           <motion.div
-            className="space-y-5 text-[#1208FF]/80 leading-relaxed"
+            className="space-y-5 text-slate-600 leading-relaxed"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
@@ -263,25 +266,26 @@ export default function SuperiorAbout() {
         </section>
 
         {/* CATEGORIES */}
-        <section className="bg-white border-y border-[#1208FF]/10">
+        <section className="bg-white border-y border-[#2563A6]/10">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-24">
+
             <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.4 }}
               variants={fadeUp}
             >
-              <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#1208FF] mb-3">
+              <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#2563A6] mb-3">
                 What We Supply
               </p>
 
-              <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight text-[#1208FF]">
+              <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight text-[#2563A6]">
                 Essential parts, across the whole vehicle.
               </h2>
             </motion.div>
 
             <motion.div
-              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1208FF]/10 border border-[#1208FF]/10"
+              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#2563A6]/10 border border-[#2563A6]/10"
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
@@ -296,16 +300,16 @@ export default function SuperiorAbout() {
                   className="bg-white p-6 flex flex-col gap-4"
                 >
                   <c.icon
-                    className="w-6 h-6 text-[#1208FF]"
+                    className="w-6 h-6 text-[#2563A6]"
                     strokeWidth={1.75}
                   />
 
                   <div>
-                    <h3 className="font-bold uppercase text-base tracking-wide text-[#1208FF]">
+                    <h3 className="font-bold uppercase text-base tracking-wide text-[#2563A6]">
                       {c.name}
                     </h3>
 
-                    <p className="text-sm text-[#1208FF]/65 mt-2 leading-relaxed">
+                    <p className="text-sm text-slate-600 mt-2 leading-relaxed">
                       {c.desc}
                     </p>
                   </div>
@@ -317,17 +321,18 @@ export default function SuperiorAbout() {
 
         {/* VALUES */}
         <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-24">
+
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
             variants={fadeUp}
           >
-            <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#1208FF] mb-3">
+            <p className="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase text-[#2563A6] mb-3">
               Why Superior
             </p>
 
-            <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight text-[#1208FF]">
+            <h2 className="font-bold uppercase text-3xl sm:text-4xl mb-10 max-w-xl leading-tight text-[#2563A6]">
               Quality, reliability, satisfaction.
             </h2>
           </motion.div>
@@ -345,24 +350,24 @@ export default function SuperiorAbout() {
                 variants={fadeUp}
                 whileHover={{
                   y: -4,
-                  borderColor: "rgba(18,8,255,0.4)",
+                  borderColor: "rgba(37,99,166,0.4)",
                 }}
                 transition={{ duration: 0.25 }}
-                className="flex gap-5 p-6 border border-[#1208FF]/10 bg-white"
+                className="flex gap-5 p-6 border border-[#2563A6]/10 bg-white"
               >
-                <div className="w-11 h-11 rounded-full bg-[#1208FF]/10 flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-full bg-[#2563A6]/10 flex items-center justify-center shrink-0">
                   <v.icon
-                    className="w-5 h-5 text-[#1208FF]"
+                    className="w-5 h-5 text-[#2563A6]"
                     strokeWidth={1.75}
                   />
                 </div>
 
                 <div>
-                  <h3 className="font-bold uppercase text-base tracking-wide text-[#1208FF]">
+                  <h3 className="font-bold uppercase text-base tracking-wide text-[#2563A6]">
                     {v.title}
                   </h3>
 
-                  <p className="text-sm text-[#1208FF]/65 mt-2 leading-relaxed">
+                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
                     {v.desc}
                   </p>
                 </div>
@@ -370,6 +375,7 @@ export default function SuperiorAbout() {
             ))}
           </motion.div>
         </section>
+
       </div>
 
       <Footer />

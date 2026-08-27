@@ -39,16 +39,20 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative h-screen overflow-hidden bg-[#1208FF]">
+        <section className="relative h-screen overflow-hidden bg-[#2563A6]">
             <img
                 src="/hero-img.jpg"
+                alt="Genuine auto parts"
                 className="absolute inset-0 h-full w-full object-cover"
             />
 
+            {/* Image overlays */}
             <div className="absolute inset-0 bg-black/25" />
             <div className="absolute inset-0 bg-black/40" />
 
             <div className="relative flex h-full mx-auto max-w-7xl items-center px-6 sm:px-10">
+
+                {/* Top-right message */}
                 <div className="absolute right-6 top-16 hidden text-right sm:right-10 md:block">
                     <h3 className="max-w-xs text-2xl font-semibold leading-snug text-white">
                         Genuine Parts, Verified Quality
@@ -57,15 +61,19 @@ export default function Hero() {
                     <div className="ml-auto mt-6 h-32 w-px bg-white bg-opacity-40" />
                 </div>
 
+                {/* Main Hero Content */}
                 <div className="max-w-xl">
+
                     <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl">
                         Genuine Auto Parts
                         <br />
 
                         <span className="relative inline-block">
-                            <span className="invisible">{animatedText}</span>
+                            <span className="invisible">
+                                {animatedText}
+                            </span>
 
-                            <span className="absolute left-0 top-0 text-[#1208FF]">
+                            <span className="absolute left-0 top-0 text-[#2563A6]">
                                 {typedText}
                             </span>
                         </span>
@@ -78,7 +86,7 @@ export default function Hero() {
 
                     <button
                         type="button"
-                        className="mt-6 rounded-full bg-[#1208FF] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#0D06CC]"
+                        className="mt-6 rounded-full bg-[#2563A6] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#1D4F85]"
                     >
                         Contact Today
                     </button>
