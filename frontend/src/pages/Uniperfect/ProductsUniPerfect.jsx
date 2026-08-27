@@ -102,38 +102,38 @@ export default function ProductsUniPerfect() {
       <div className="bg-[#F8F5F0] text-[#181513] overflow-x-hidden">
         {/* HEADER */}
         <section className="border-b border-black/10">
-  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-14 pb-10 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20">
-    <motion.div
-      initial="hidden"
-      animate="show"
-      variants={stagger}
-      className="text-center"
-    >
-      <motion.p
-        variants={fadeUp}
-        className="text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-4 sm:mb-5"
-      >
-        Genuine Auto Spare Parts
-      </motion.p>
+          <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 pt-14 pb-10 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20">
+            <motion.div
+              initial="hidden"
+              animate="show"
+              variants={stagger}
+              className="text-center"
+            >
+              <motion.p
+                variants={fadeUp}
+                className="text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-4 sm:mb-5"
+              >
+                Genuine Auto Spare Parts
+              </motion.p>
 
-      <motion.h1
-        variants={fadeUp}
-        className="font-bold uppercase leading-[0.95] text-[14vw] xs:text-5xl sm:text-6xl lg:text-7xl tracking-tight break-words"
-      >
-        Our <span className="text-[#C8102E]">Products</span>
-      </motion.h1>
+              <motion.h1
+                variants={fadeUp}
+                className="font-bold uppercase leading-[0.95] text-[14vw] xs:text-5xl sm:text-6xl lg:text-7xl tracking-tight break-words"
+              >
+                Our <span className="text-[#C8102E]">Products</span>
+              </motion.h1>
 
-      <motion.p
-        variants={fadeUp}
-        className="mt-6 sm:mt-7 mx-auto text-base sm:text-lg leading-relaxed text-[#181513]/80 max-w-xl px-2 sm:px-0"
-      >
-        A selection of the genuine, OEM-quality parts we import and
-        distribute nationwide — sourced from reputable manufacturers
-        for Toyota, Honda, Suzuki and other popular models.
-      </motion.p>
-    </motion.div>
-  </div>
-</section>
+              <motion.p
+                variants={fadeUp}
+                className="mt-6 sm:mt-7 mx-auto text-base sm:text-lg leading-relaxed text-[#181513]/80 max-w-xl px-2 sm:px-0"
+              >
+                A selection of the genuine, OEM-quality parts we import and
+                distribute nationwide — sourced from reputable manufacturers
+                for Toyota, Honda, Suzuki and other popular models.
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
 
         {/* PRODUCT ROWS — zigzag */}
         <section>
@@ -145,9 +145,8 @@ export default function ProductsUniPerfect() {
                 className={`border-b border-black/10 ${reversed ? "bg-white" : ""}`}
               >
                 <div
-                  className={`max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-20 lg:py-24 flex flex-col ${
-                    reversed ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } items-center gap-10 sm:gap-12 lg:gap-20`}
+                  className={`max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-12 sm:py-20 lg:py-24 flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"
+                    } items-center gap-10 sm:gap-12 lg:gap-20`}
                 >
                   {/* IMAGE */}
                   <motion.div
@@ -160,8 +159,8 @@ export default function ProductsUniPerfect() {
                     <div className="max-w-[85%] xs:max-w-sm mx-auto lg:max-w-none">
                       <motion.div
                         className="relative"
-                        
-                        
+
+
                       >
                         <div className="relative aspect-square bg-white border border-black/10 overflow-hidden">
                           <img
@@ -180,9 +179,8 @@ export default function ProductsUniPerfect() {
 
                         {/* Genuine-parts stamp — echoes the About page's signature mark */}
                         <div
-                          className={`absolute -top-3 sm:-top-5 ${
-                            reversed ? "-right-3 sm:-right-5" : "-left-3 sm:-left-5"
-                          } w-12 h-12 sm:w-16 sm:h-16 lg:w-[4.5rem] lg:h-[4.5rem] rounded-full bg-[#F8F5F0] border-2 border-dashed border-[#C8102E]/70 flex flex-col items-center justify-center text-center rotate-[-6deg] shadow-[0_2px_10px_rgba(0,0,0,0.08)]`}
+                          className={`absolute -top-3 sm:-top-5 ${reversed ? "-right-3 sm:-right-5" : "-left-3 sm:-left-5"
+                            } w-12 h-12 sm:w-16 sm:h-16 lg:w-[4.5rem] lg:h-[4.5rem] rounded-full bg-[#F8F5F0] border-2 border-dashed border-[#C8102E]/70 flex flex-col items-center justify-center text-center rotate-[-6deg] shadow-[0_2px_10px_rgba(0,0,0,0.08)]`}
                         >
                           <BadgeCheck className="w-3 h-3 sm:w-4 sm:h-4 text-[#C8102E]" strokeWidth={1.75} />
                           <span className="text-[6px] sm:text-[7px] font-bold uppercase tracking-[0.15em] text-[#C8102E] mt-0.5 leading-none">
@@ -207,7 +205,7 @@ export default function ProductsUniPerfect() {
                     <h3 className="font-bold uppercase text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2">
                       {p.name}
                     </h3>
-                    
+
                     <p className="text-sm sm:text-base text-[#181513]/70 leading-relaxed max-w-md mx-auto lg:mx-0">
                       {p.desc}
                     </p>
@@ -218,25 +216,51 @@ export default function ProductsUniPerfect() {
           })}
         </section>
         <section className="border-b border-black/10">
-  <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-14 sm:py-20 text-center">
-    <h3 className="font-bold uppercase text-xl sm:text-3xl tracking-tight mb-4">
-      Looking for something else?
-    </h3>
-    <p className="text-sm sm:text-base text-[#181513]/70 max-w-xl mx-auto mb-8 leading-relaxed px-2 sm:px-0">
-      We stock 200+ genuine auto parts beyond what's listed here.
-      Reach out on WhatsApp and we'll help you find the exact part you need.
-    </p>
-    <a
-      href="https://wa.me/923350099880"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold uppercase tracking-wide text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 text-center"
-    >
-      <FaWhatsapp size={18} className="shrink-0" />
-      <span>For More Products, Contact Here</span>
-    </a>
-  </div>
-</section>
+          <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10 py-14 sm:py-20 text-center">
+            <h3 className="font-bold uppercase text-xl sm:text-3xl tracking-tight mb-4">
+              Looking for something else?
+            </h3>
+
+            <p className="text-sm sm:text-base text-[#181513]/70 max-w-xl mx-auto mb-8 leading-relaxed px-2 sm:px-0">
+              We stock 200+ genuine auto parts beyond what's listed here.
+              Reach out on WhatsApp and we'll help you find the exact part you need.
+            </p>
+
+            <a
+              href="https://wa.me/923350099880"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+        inline-flex
+        w-full sm:w-auto
+        max-w-full
+        items-center
+        justify-center
+        gap-2
+        bg-[#25D366]
+        text-white
+        font-semibold
+        uppercase
+        tracking-wide
+        text-xs sm:text-sm md:text-base
+        px-5 sm:px-8
+        py-3 sm:py-4
+        rounded-full
+        shadow-lg
+        hover:scale-105
+        hover:shadow-xl
+        transition-all
+        duration-300
+        text-center
+        leading-tight
+        whitespace-normal
+      "
+            >
+              <FaWhatsapp size={18} className="shrink-0" />
+              <span>For More Products, Contact Here</span>
+            </a>
+          </div>
+        </section>
       </div>
       <Footer />
     </>

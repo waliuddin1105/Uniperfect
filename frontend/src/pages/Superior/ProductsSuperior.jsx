@@ -225,7 +225,31 @@ export default function ProductsSuperior() {
               href="https://wa.me/923350099880"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold uppercase tracking-wide text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 text-center"
+              className="
+        inline-flex
+        w-full sm:w-auto
+        max-w-full
+        items-center
+        justify-center
+        gap-2
+        bg-[#25D366]
+        text-white
+        font-semibold
+        uppercase
+        tracking-wide
+        text-xs sm:text-sm md:text-base
+        px-5 sm:px-8
+        py-3 sm:py-4
+        rounded-full
+        shadow-lg
+        hover:scale-105
+        hover:shadow-xl
+        transition-all
+        duration-300
+        text-center
+        leading-tight
+        whitespace-normal
+      "
             >
               <FaWhatsapp size={18} className="shrink-0" />
               <span>For More Products, Contact Here</span>
