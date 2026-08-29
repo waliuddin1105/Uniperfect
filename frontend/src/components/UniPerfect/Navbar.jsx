@@ -14,7 +14,7 @@ const NAV_LINKS = [
   {
     label: " More Brands",
     dropdown: [
-      { label: "Superior", href: "/s" },
+      { label: "Superior", href: "/s/products" },
     ],
   },
   { label: "About Us", href: "/u/about" },

@@ -12,7 +12,7 @@ const BRAND_BLUE = "#2563A6";
 // correctly no matter which page you're currently on.
 
 const NAV_LINKS = [
-  { label: "Home", href: "/s" },
+  { label: "Home", href: "/" },
 
   { label: "Products", href: "/s/products" },
 
@@ -23,7 +23,6 @@ const NAV_LINKS = [
     ],
   },
 
-  { label: "About Us", href: "/s/about" },
 ];
 
 function DesktopDropdown({ label, items }) {
@@ -109,7 +108,7 @@ export default function Navbar() {
         {/* Logo — drop your real logo file in here (e.g. an <img> tag) */}
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/sp_logo.png"
+            src="/sp_logo_new.png"
             alt="Company logo"
             className="max-h-18 max-w-40 rounded-md"
           />
