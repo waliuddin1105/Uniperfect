@@ -23,6 +23,7 @@ const NAV_LINKS = [
     ],
   },
 
+  { label: "Contact Us", scrollToBottom: true },
 ];
 
 function DesktopDropdown({ label, items }) {
@@ -99,6 +100,17 @@ function MobileDropdown({ label, items }) {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Scroll smoothly to the bottom of the page
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+
+    // Close mobile menu
+    setMobileOpen(false);
+  };
+
   return (
     <header
       className="sticky top-0 z-50 w-full shadow-md"
@@ -123,6 +135,15 @@ export default function Navbar() {
                 label={link.label}
                 items={link.dropdown}
               />
+            ) : link.scrollToBottom ? (
+              <button
+                key={link.label}
+                type="button"
+                onClick={scrollToBottom}
+                className="py-2 text-base font-medium text-white transition-colors hover:text-white/80"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
                 key={link.label}
@@ -157,6 +178,15 @@ export default function Navbar() {
                 label={link.label}
                 items={link.dropdown}
               />
+            ) : link.scrollToBottom ? (
+              <button
+                key={link.label}
+                type="button"
+                onClick={scrollToBottom}
+                className="block w-full border-b border-white/20 py-3 text-left text-base font-medium text-white"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
                 key={link.label}

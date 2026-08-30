@@ -5,19 +5,18 @@ import { ChevronDown, Menu, X } from "lucide-react";
 // Brand red pulled directly from the logo background (#E50E37).
 const BRAND_RED = "#E50E37";
 
-// Edit these arrays to change links / dropdown items.
-// All internal paths are absolute (start with "/") so routing works
-// correctly no matter which page you're currently on.
+// Navigation links
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/u/products" },
   {
-    label: " More Brands",
+    label: "More Brands",
     dropdown: [
       { label: "Superior", href: "/s/products" },
     ],
   },
   { label: "About Us", href: "/u/about" },
+  { label: "Contact Us", scrollToBottom: true },
 ];
 
 function DesktopDropdown({ label, items }) {
@@ -28,13 +27,15 @@ function DesktopDropdown({ label, items }) {
         className="flex items-center gap-1 py-2 text-base font-medium text-white transition-colors hover:text-white/80 focus:outline-none focus-visible:text-white/80"
       >
         {label}
+
         <ChevronDown
           size={16}
           className="mt-px transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
         />
       </button>
+
       {/* Padded wrapper closes the hover gap between the trigger and the panel */}
-      <div className="invisible absolute left-0 top-full z-9999 w-56 translate-y-1 pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+      <div className="invisible absolute left-0 top-full z-[9999] w-56 translate-y-1 pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
         <div className="overflow-hidden rounded-xl border border-slate-100 bg-white py-2 shadow-xl">
           {items.map((item) => (
             <Link
@@ -53,6 +54,7 @@ function DesktopDropdown({ label, items }) {
 
 function MobileDropdown({ label, items }) {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="border-b border-white/20">
       <button
@@ -62,11 +64,15 @@ function MobileDropdown({ label, items }) {
         aria-expanded={open}
       >
         {label}
+
         <ChevronDown
           size={16}
-          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
         />
       </button>
+
       {open && (
         <div className="pb-2">
           {items.map((item) => (
@@ -87,22 +93,50 @@ function MobileDropdown({ label, items }) {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Scroll smoothly to the bottom of the current page
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+
+    // Close mobile menu after clicking Contact Us
+    setMobileOpen(false);
+  };
+
   return (
     <header
       className="sticky top-0 z-50 w-full shadow-md"
       style={{ backgroundColor: BRAND_RED }}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
-        {/* Logo — drop your real logo file in here (e.g. an <img> tag) */}
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo4.jpg" alt="Company logo" className="max-h-18 max-w-40 rounded-md" />
+          <img
+            src="/logo4.jpg"
+            alt="Company logo"
+            className="max-h-18 max-w-40 rounded-md"
+          />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
             link.dropdown ? (
-              <DesktopDropdown key={link.label} label={link.label} items={link.dropdown} />
+              <DesktopDropdown
+                key={link.label}
+                label={link.label}
+                items={link.dropdown}
+              />
+            ) : link.scrollToBottom ? (
+              <button
+                key={link.label}
+                type="button"
+                onClick={scrollToBottom}
+                className="py-2 text-base font-medium text-white transition-colors hover:text-white/80"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
                 key={link.label}
@@ -127,12 +161,25 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile nav (tap to expand dropdowns, since there's no hover on touch) */}
+      {/* Mobile nav */}
       {mobileOpen && (
         <nav className="border-t border-white/20 px-6 md:hidden">
           {NAV_LINKS.map((link) =>
             link.dropdown ? (
-              <MobileDropdown key={link.label} label={link.label} items={link.dropdown} />
+              <MobileDropdown
+                key={link.label}
+                label={link.label}
+                items={link.dropdown}
+              />
+            ) : link.scrollToBottom ? (
+              <button
+                key={link.label}
+                type="button"
+                onClick={scrollToBottom}
+                className="block w-full border-b border-white/20 py-3 text-left text-base font-medium text-white"
+              >
+                {link.label}
+              </button>
             ) : (
               <Link
                 key={link.label}

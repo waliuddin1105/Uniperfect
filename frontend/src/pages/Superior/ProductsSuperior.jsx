@@ -89,7 +89,7 @@ const products = [
     images: [
       "/superior_prod.jpeg",
       "/sp_prod_2.jpg",
-      "/sp_prod_3.jpg",
+      "/sp_prod_4.png",
     ],
     desc: "Engineered to OEM specifications, the Superior CV Joint delivers smooth, reliable power transfer from your transmission to the wheels, even under heavy load and constant steering angles. Precision-machined splines and a durable tripod bearing assembly ensure consistent performance, reduced vibration, and a longer service life than generic aftermarket parts. Every unit undergoes strict quality checks before packaging, so workshops can install with confidence and drivers get a noise-free, shudder-free ride backed by 20+ years of trusted sourcing.",
   },
