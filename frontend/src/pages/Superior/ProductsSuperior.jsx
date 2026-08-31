@@ -340,7 +340,7 @@ export default function SuperiorProducts() {
                 <motion.div key={s.label} variants={fadeUp} className="py-7 px-4 sm:px-6 text-center sm:text-left">
                   <div className="text-2xl sm:text-3xl font-bold text-white flex items-baseline gap-1 justify-center sm:justify-start">
                     {s.value}
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97706] mb-1" />
+                    
                   </div>
                   <div className="text-xs sm:text-sm text-white/70 mt-1 leading-snug">
                     {s.label}
