@@ -1,4 +1,6 @@
+
 import { useState } from "react";
+
 import {
     Phone,
     Mail,
@@ -6,15 +8,21 @@ import {
     ChevronDown,
     ChevronUp,
 } from "lucide-react";
+
 import { FaWhatsapp } from "react-icons/fa";
+
 export default function Footer() {
+
     const [productsOpen, setProductsOpen] = useState(false);
     const [brandsOpen, setBrandsOpen] = useState(false);
 
     return (
         <footer className="border-t bg-white">
+
             <div className="max-w-7xl mx-auto px-6 py-14">
+
                 <div className="grid md:grid-cols-2 gap-12">
+
                     {/* Left */}
                     <div>
                         <h2 className="text-3xl font-bold text-[#C8102E] mb-6">
@@ -35,6 +43,7 @@ export default function Footer() {
                         </h3>
 
                         <div className="space-y-5 text-gray-700">
+
                             {/* Phone */}
                             <a
                                 href="tel:+923212699997"
@@ -44,33 +53,49 @@ export default function Footer() {
                                 <span>03212699997</span>
                             </a>
 
+                            {/* Email */}
+                            <a
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@uniperfect.net"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-start gap-3 hover:text-[#C8102E] transition"
+                            >
+                                <Mail size={18} className="mt-1 shrink-0" />
+                                <span>info@uniperfect.net</span>
+                            </a>
+
                             {/* Karachi */}
                             <div>
                                 <h4 className="font-semibold text-[#C8102E] mb-2">
                                     Karachi
                                 </h4>
+
                                 <a
-                                
                                     href="https://maps.google.com/?q=Ruby+Plaza+Karachi"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex gap-3 hover:text-[#C8102E] transition"
                                 >
                                     <MapPin size={18} className="mt-1 shrink-0" />
+
                                     <span>
                                         G-92 Ruby Plaza, Magazine Lane, near Preedy Quarters,
                                         M.A. Jinnah Road, Karachi
                                     </span>
                                 </a>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
 
                 <div className="border-t mt-12 pt-6 text-center text-sm text-gray-500">
                     © {new Date().getFullYear()} Uni Perfect. All rights reserved.
                 </div>
+
             </div>
+
             {/* Floating WhatsApp Button */}
             <div className="fixed bottom-6 right-6 z-50">
                 <a
@@ -83,6 +108,8 @@ export default function Footer() {
                     <FaWhatsapp size={30} />
                 </a>
             </div>
+
         </footer>
     );
 }
+

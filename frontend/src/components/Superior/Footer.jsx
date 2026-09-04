@@ -1,8 +1,10 @@
+
 import { useState } from "react";
 
 import {
     Phone,
     MapPin,
+    Mail,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -43,6 +45,17 @@ export default function Footer() {
                                 />
                                 <span>03212699997</span>
                             </a>
+
+                            {/* Email */}
+                            <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@uniperfect.net"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-start gap-3 hover:text-[#C8102E] transition"
+>
+    <Mail size={18} className="mt-1 shrink-0" />
+    <span>info@uniperfect.net</span>
+</a>
 
                             {/* Karachi */}
                             <div>
@@ -91,3 +104,4 @@ export default function Footer() {
         </footer>
     );
 }
+
